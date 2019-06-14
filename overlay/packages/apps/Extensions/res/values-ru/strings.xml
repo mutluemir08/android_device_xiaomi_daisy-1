@@ -609,7 +609,7 @@
     <string name="display_cutout_style_title">Стиль отображения</string>
     <string name="display_cutout_style_normal">Нормальный</string>
     <string name="display_cutout_style_immerse">Погружение</string>
-    <string name="display_cutout_style_hide">Скрытый</string>
+    <string name="display_cutout_style_hide">Скрытие</string>
     <string name="stock_statusbar_in_hide">Высота строки состояния по умолчанию</string>
     <string name="stock_statusbar_in_hide_summary">Использовать стандартную высоту строки состояния в режиме скрытия моноброви</string>
 
@@ -619,4 +619,8 @@
     <!-- Heads up options -->
     <string name="less_boring_heads_up_title">Менее надоедливые всплывающие уведомления</string>
     <string name="less_boring_heads_up_summary">Показывать всплывающие уведомления только для приложений телефона и сообщений, если они находятся в фоне</string>
+
+    <!-- AEX logo -->
+    <string name="aex_logo_title">AEX лого</string>
+    <string name="aex_logo_summary">Пусть все знают, что Вы используете AEX, когда смотрят на экран Вашего телефона</string>
 </resources>
