@@ -50,8 +50,4 @@ BUILD_FINGERPRINT := "xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.9.0.PDLM
 #TARGET_USE_GCAM := true
 TARGET_USE_JELLY := true
 
-#Use Snap Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 TARGET_BOOT_ANIMATION_RES := 2280
