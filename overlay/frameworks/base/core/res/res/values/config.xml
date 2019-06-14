@@ -18,9 +18,6 @@
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
 
-    <!-- Enable system navigation keys. -->	
-    <bool name="config_supportSystemNavigationKeys">true</bool>
-
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
@@ -542,4 +539,16 @@
     
    <!-- Enable dual LTE capability support-->
    <bool name="config_dual_LTE_capability">true</bool>
+
+    <!-- Whether device has a physical display cutout -->
+    <bool name="config_physicalDisplayCutout">true</bool>
+
+    <!-- Default value for proximity check on screen wake
+     NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
+    <bool name="config_proximityCheckOnWake">true</bool>
+    <integer name="config_proximityCheckTimeout">100</integer>
+    <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+
+   <!-- Whether the always on display mode is available. -->
+   <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 </resources>

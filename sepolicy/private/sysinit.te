@@ -1,0 +1,12 @@
+allow sysinit shell_exec:file { getattr read execute open };
+allow sysinit system_file:dir { open read };
+allow sysinit toolbox_exec:file { execute execute_no_trans getattr open read };
+#allow sysinit hostapd_data_file:dir { add_name getattr open read search write };
+#allow sysinit hostapd_data_file:file getattr;
+#allow sysinit self:capability dac_override;
+allow sysinit servicemanager:binder call;
+allow sysinit surfaceflinger:binder call;
+allow sysinit surfaceflinger_service:service_manager find;
+allow sysinit system_file:file execute_no_trans;
+
+

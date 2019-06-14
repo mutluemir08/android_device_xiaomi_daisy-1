@@ -71,6 +71,7 @@ PRODUCT_PACKAGES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
+    init.qcom.rc \
     init.target.rc
 
 # Display
@@ -115,6 +116,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.qcom
 
+# Offmode charging
+PRODUCT_PACKAGES += \
+    chargeonlymode
+
+# Hostapd fix
+PRODUCT_PACKAGES += \
+    01hostapd_fix
+    #hostapd_fix
+
+# init.d
+PRODUCT_PACKAGES += \
+    sysinit
+
 # QCOM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
@@ -158,3 +172,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# Disable hardware overlays permanently
+PRODUCT_PACKAGES += \
+    10disablehw

@@ -1,5 +1,6 @@
 /*
- * Copyright (c) 2012-2018, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2012-2013, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2014, The CyanogenMod Project
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -36,175 +37,482 @@
 #include <fcntl.h>
 #include <dlfcn.h>
 #include <stdlib.h>
-#include <unistd.h>
 
-#define LOG_TAG "QTI PowerHAL"
+#define LOG_TAG "QCOM PowerHAL"
 #include <utils/Log.h>
 #include <hardware/hardware.h>
-#include <hardware/power.h>
+#include <pthread.h>
 
 #include "utils.h"
+#include "metadata-defs.h"
 #include "hint-data.h"
 #include "performance.h"
+#include "power.h"
 #include "power-common.h"
+#include "power-feature.h"
 
-static struct hint_handles handles[NUM_HINTS];
+static int saved_dcvs_cpu0_slack_max = -1;
+static int saved_dcvs_cpu0_slack_min = -1;
+static int saved_mpdecision_slack_max = -1;
+static int saved_mpdecision_slack_min = -1;
+static int slack_node_rw_failed = 0;
+static int display_hint_sent;
 
-static int power_device_open(const hw_module_t* module, const char* name,
-        hw_device_t** device);
+static pthread_mutex_t hint_mutex = PTHREAD_MUTEX_INITIALIZER;
 
-static struct hw_module_methods_t power_module_methods = {
-    .open = power_device_open,
-};
-
-static void power_init(struct power_module *module)
+static void power_init(__attribute__((unused))struct power_module *module)
 {
-    ALOGI("Initing");
+    ALOGI("QCOM power HAL initing.");
+}
 
-    for (int i=0; i<NUM_HINTS; i++) {
-        handles[i].handle       = 0;
-        handles[i].ref_count    = 0;
+static void process_video_decode_hint(void *metadata)
+{
+    char governor[80];
+    struct video_decode_metadata_t video_decode_metadata;
+
+    if (get_scaling_governor(governor, sizeof(governor)) == -1) {
+        ALOGE("Can't obtain scaling governor.");
+
+        return;
+    }
+
+    if (metadata) {
+        ALOGI("Processing video decode hint. Metadata: %s", (char *)metadata);
+    }
+
+    /* Initialize encode metadata struct fields. */
+    memset(&video_decode_metadata, 0, sizeof(struct video_decode_metadata_t));
+    video_decode_metadata.state = -1;
+    video_decode_metadata.hint_id = DEFAULT_VIDEO_DECODE_HINT_ID;
+
+    if (metadata) {
+        if (parse_video_decode_metadata((char *)metadata, &video_decode_metadata) ==
+            -1) {
+            ALOGE("Error occurred while parsing metadata.");
+            return;
+        }
+    } else {
+        return;
+    }
+
+    if (video_decode_metadata.state == 1) {
+        if ((strncmp(governor, ONDEMAND_GOVERNOR, strlen(ONDEMAND_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(ONDEMAND_GOVERNOR))) {
+            int resource_values[] = {THREAD_MIGRATION_SYNC_OFF};
+
+            perform_hint_action(video_decode_metadata.hint_id,
+                    resource_values, ARRAY_SIZE(resource_values));
+        } else if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
+            int resource_values[] = {TR_MS_30, HISPEED_LOAD_90, HS_FREQ_1026, THREAD_MIGRATION_SYNC_OFF};
+
+            perform_hint_action(video_decode_metadata.hint_id,
+                    resource_values, ARRAY_SIZE(resource_values));
+        }
+    } else if (video_decode_metadata.state == 0) {
+        if ((strncmp(governor, ONDEMAND_GOVERNOR, strlen(ONDEMAND_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(ONDEMAND_GOVERNOR))) {
+            undo_hint_action(video_decode_metadata.hint_id);
+        } else if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
+            undo_hint_action(video_decode_metadata.hint_id);
+        }
     }
 }
 
-int __attribute__ ((weak)) power_hint_override(struct power_module *module, power_hint_t hint,
-        void *data)
+static void process_video_encode_hint(void *metadata)
+{
+    char governor[80];
+    struct video_encode_metadata_t video_encode_metadata;
+
+    if (get_scaling_governor(governor, sizeof(governor)) == -1) {
+        ALOGE("Can't obtain scaling governor.");
+
+        return;
+    }
+
+    /* Initialize encode metadata struct fields. */
+    memset(&video_encode_metadata, 0, sizeof(struct video_encode_metadata_t));
+    video_encode_metadata.state = -1;
+    video_encode_metadata.hint_id = DEFAULT_VIDEO_ENCODE_HINT_ID;
+
+    if (metadata) {
+        if (parse_video_encode_metadata((char *)metadata, &video_encode_metadata) ==
+            -1) {
+            ALOGE("Error occurred while parsing metadata.");
+            return;
+        }
+    } else {
+        return;
+    }
+
+    if (video_encode_metadata.state == 1) {
+        if ((strncmp(governor, ONDEMAND_GOVERNOR, strlen(ONDEMAND_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(ONDEMAND_GOVERNOR))) {
+            int resource_values[] = {IO_BUSY_OFF, SAMPLING_DOWN_FACTOR_1, THREAD_MIGRATION_SYNC_OFF};
+
+            perform_hint_action(video_encode_metadata.hint_id,
+                resource_values, ARRAY_SIZE(resource_values));
+        } else if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
+            int resource_values[] = {TR_MS_30, HISPEED_LOAD_90, HS_FREQ_1026, THREAD_MIGRATION_SYNC_OFF,
+                INTERACTIVE_IO_BUSY_OFF};
+
+            perform_hint_action(video_encode_metadata.hint_id,
+                    resource_values, ARRAY_SIZE(resource_values));
+        }
+    } else if (video_encode_metadata.state == 0) {
+        if ((strncmp(governor, ONDEMAND_GOVERNOR, strlen(ONDEMAND_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(ONDEMAND_GOVERNOR))) {
+            undo_hint_action(video_encode_metadata.hint_id);
+        } else if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
+            undo_hint_action(video_encode_metadata.hint_id);
+        }
+    }
+}
+
+int __attribute__ ((weak)) power_hint_override(
+        __attribute__((unused)) struct power_module *module,
+        __attribute__((unused)) power_hint_t hint,
+        __attribute__((unused)) void *data)
 {
     return HINT_NONE;
 }
 
-/* Declare function before use */
-void interaction(int duration, int num_args, int opt_list[]);
+extern void interaction(int duration, int num_args, int opt_list[]);
 
-static void power_hint(struct power_module *module, power_hint_t hint,
+static void power_hint(__attribute__((unused)) struct power_module *module, power_hint_t hint,
         void *data)
 {
+    pthread_mutex_lock(&hint_mutex);
+
     /* Check if this hint has been overridden. */
     if (power_hint_override(module, hint, data) == HINT_HANDLED) {
         /* The power_hint has been handled. We can skip the rest. */
-        return;
+        goto out;
     }
+
     switch(hint) {
         case POWER_HINT_VSYNC:
-        break;
-        case POWER_HINT_VR_MODE:
-            ALOGI("VR mode power hint not handled in power_hint_override");
-            break;
         case POWER_HINT_INTERACTION:
-        {
-            int resources[] = {0x702, 0x20F, 0x30F};
-            int duration = 3000;
-
-            interaction(duration, sizeof(resources)/sizeof(resources[0]), resources);
-        }
+        case POWER_HINT_CPU_BOOST:
+        case POWER_HINT_SET_PROFILE:
+        case POWER_HINT_LOW_POWER:
         break;
-        //fall through below, hints will fail if not defined in powerhint.xml
-        case POWER_HINT_SUSTAINED_PERFORMANCE:
         case POWER_HINT_VIDEO_ENCODE:
-            if (data) {
-                if (handles[hint].ref_count == 0)
-                    handles[hint].handle = perf_hint_enable((AOSP_DELTA + hint), 0);
-
-                if (handles[hint].handle > 0)
-                    handles[hint].ref_count++;
-            }
-            else
-                if (handles[hint].handle > 0)
-                    if (--handles[hint].ref_count == 0) {
-                        release_request(handles[hint].handle);
-                        handles[hint].handle = 0;
-                    }
-                else
-                    ALOGE("Lock for hint: %X was not acquired, cannot be released", hint);
+            process_video_encode_hint(data);
+        break;
+        case POWER_HINT_VIDEO_DECODE:
+            process_video_decode_hint(data);
+        break;
+        default:
         break;
     }
+
+out:
+    pthread_mutex_unlock(&hint_mutex);
 }
 
-int __attribute__ ((weak)) set_interactive_override(struct power_module *module, int on)
+int __attribute__ ((weak)) set_interactive_override(
+        __attribute__((unused)) struct power_module *module,
+        __attribute__((unused)) int on)
 {
     return HINT_NONE;
 }
 
-void set_feature(struct power_module* module, feature_t feature, int state) {
-    switch (feature) {
-#ifdef TAP_TO_WAKE_NODE
-        case POWER_FEATURE_DOUBLE_TAP_TO_WAKE:
-            sysfs_write(TAP_TO_WAKE_NODE, state ? "1" : "0");
-            break;
-#endif
-        default:
-            break;
-    }
+int __attribute__ ((weak)) get_number_of_profiles()
+{
+    return 0;
 }
+
+#ifdef SET_INTERACTIVE_EXT
+extern void cm_power_set_interactive_ext(int on);
+#endif
 
 void set_interactive(struct power_module *module, int on)
 {
-    if (!on) {
-        /* Send Display OFF hint to perf HAL */
-        perf_hint_enable(VENDOR_HINT_DISPLAY_OFF, 0);
-    } else {
-        /* Send Display ON hint to perf HAL */
-        perf_hint_enable(VENDOR_HINT_DISPLAY_ON, 0);
-    }
+    char governor[80];
+    char tmp_str[NODE_MAX];
+    struct video_encode_metadata_t video_encode_metadata;
+    int rc = 0;
+
+    pthread_mutex_lock(&hint_mutex);
+
+    /**
+     * Ignore consecutive display-off hints
+     * Consecutive display-on hints are already handled
+     */
+    if (display_hint_sent && !on)
+        goto out;
+
+    display_hint_sent = !on;
+
+#ifdef SET_INTERACTIVE_EXT
+    cm_power_set_interactive_ext(on);
+#endif
 
     if (set_interactive_override(module, on) == HINT_HANDLED) {
-        return;
+        goto out;
     }
 
     ALOGI("Got set_interactive hint");
-}
 
-static int power_device_open(const hw_module_t* module, const char* name,
-        hw_device_t** device)
-{
-    int status = -EINVAL;
-    if (module && name && device) {
-        if (!strcmp(name, POWER_HARDWARE_MODULE_ID)) {
-            power_module_t *dev = (power_module_t *)malloc(sizeof(*dev));
+    if (get_scaling_governor(governor, sizeof(governor)) == -1) {
+        ALOGE("Can't obtain scaling governor.");
+        goto out;
+    }
 
-            if(dev) {
-                memset(dev, 0, sizeof(*dev));
+    if (!on) {
+        /* Display off. */
+        if ((strncmp(governor, ONDEMAND_GOVERNOR, strlen(ONDEMAND_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(ONDEMAND_GOVERNOR))) {
+            int resource_values[] = { MS_500, THREAD_MIGRATION_SYNC_OFF };
 
-                if(dev) {
-                    /* initialize the fields */
-                    dev->common.module_api_version = POWER_MODULE_API_VERSION_0_3;
-                    dev->common.tag = HARDWARE_DEVICE_TAG;
-                    dev->init = power_init;
-                    dev->powerHint = power_hint;
-                    dev->setInteractive = set_interactive;
-                    /* At the moment we support 0.3 APIs */
-                    dev->setFeature = set_feature;
-                        dev->get_number_of_platform_modes = NULL,
-                        dev->get_platform_low_power_stats = NULL,
-                        dev->get_voter_list = NULL,
-                        *device = (hw_device_t*)dev;
-                    status = 0;
-                } else {
-                    status = -ENOMEM;
+            perform_hint_action(DISPLAY_STATE_HINT_ID,
+                    resource_values, ARRAY_SIZE(resource_values));
+        } else if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
+            int resource_values[] = {TR_MS_50, THREAD_MIGRATION_SYNC_OFF};
+
+            perform_hint_action(DISPLAY_STATE_HINT_ID,
+                    resource_values, ARRAY_SIZE(resource_values));
+        } else if ((strncmp(governor, MSMDCVS_GOVERNOR, strlen(MSMDCVS_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(MSMDCVS_GOVERNOR))) {
+            /* Display turned off. */
+            if (sysfs_read(DCVS_CPU0_SLACK_MAX_NODE, tmp_str, NODE_MAX - 1)) {
+                if (!slack_node_rw_failed) {
+                    ALOGE("Failed to read from %s", DCVS_CPU0_SLACK_MAX_NODE);
+                }
+
+                rc = 1;
+            } else {
+                saved_dcvs_cpu0_slack_max = atoi(tmp_str);
+            }
+
+            if (sysfs_read(DCVS_CPU0_SLACK_MIN_NODE, tmp_str, NODE_MAX - 1)) {
+                if (!slack_node_rw_failed) {
+                    ALOGE("Failed to read from %s", DCVS_CPU0_SLACK_MIN_NODE);
+                }
+
+                rc = 1;
+            } else {
+                saved_dcvs_cpu0_slack_min = atoi(tmp_str);
+            }
+
+            if (sysfs_read(MPDECISION_SLACK_MAX_NODE, tmp_str, NODE_MAX - 1)) {
+                if (!slack_node_rw_failed) {
+                    ALOGE("Failed to read from %s", MPDECISION_SLACK_MAX_NODE);
+                }
+
+                rc = 1;
+            } else {
+                saved_mpdecision_slack_max = atoi(tmp_str);
+            }
+
+            if (sysfs_read(MPDECISION_SLACK_MIN_NODE, tmp_str, NODE_MAX - 1)) {
+                if(!slack_node_rw_failed) {
+                    ALOGE("Failed to read from %s", MPDECISION_SLACK_MIN_NODE);
+                }
+
+                rc = 1;
+            } else {
+                saved_mpdecision_slack_min = atoi(tmp_str);
+            }
+
+            /* Write new values. */
+            if (saved_dcvs_cpu0_slack_max != -1) {
+                snprintf(tmp_str, NODE_MAX, "%d", 10 * saved_dcvs_cpu0_slack_max);
+
+                if (sysfs_write(DCVS_CPU0_SLACK_MAX_NODE, tmp_str) != 0) {
+                    if (!slack_node_rw_failed) {
+                        ALOGE("Failed to write to %s", DCVS_CPU0_SLACK_MAX_NODE);
+                    }
+
+                    rc = 1;
                 }
             }
-            else {
-                status = -ENOMEM;
+
+            if (saved_dcvs_cpu0_slack_min != -1) {
+                snprintf(tmp_str, NODE_MAX, "%d", 10 * saved_dcvs_cpu0_slack_min);
+
+                if (sysfs_write(DCVS_CPU0_SLACK_MIN_NODE, tmp_str) != 0) {
+                    if(!slack_node_rw_failed) {
+                        ALOGE("Failed to write to %s", DCVS_CPU0_SLACK_MIN_NODE);
+                    }
+
+                    rc = 1;
+                }
             }
+
+            if (saved_mpdecision_slack_max != -1) {
+                snprintf(tmp_str, NODE_MAX, "%d", 10 * saved_mpdecision_slack_max);
+
+                if (sysfs_write(MPDECISION_SLACK_MAX_NODE, tmp_str) != 0) {
+                    if(!slack_node_rw_failed) {
+                        ALOGE("Failed to write to %s", MPDECISION_SLACK_MAX_NODE);
+                    }
+
+                    rc = 1;
+                }
+            }
+
+            if (saved_mpdecision_slack_min != -1) {
+                snprintf(tmp_str, NODE_MAX, "%d", 10 * saved_mpdecision_slack_min);
+
+                if (sysfs_write(MPDECISION_SLACK_MIN_NODE, tmp_str) != 0) {
+                    if(!slack_node_rw_failed) {
+                        ALOGE("Failed to write to %s", MPDECISION_SLACK_MIN_NODE);
+                    }
+
+                    rc = 1;
+                }
+            }
+
+            slack_node_rw_failed = rc;
+        }
+    } else {
+        /* Display on. */
+        if ((strncmp(governor, ONDEMAND_GOVERNOR, strlen(ONDEMAND_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(ONDEMAND_GOVERNOR))) {
+            undo_hint_action(DISPLAY_STATE_HINT_ID);
+        } else if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
+            undo_hint_action(DISPLAY_STATE_HINT_ID);
+        } else if ((strncmp(governor, MSMDCVS_GOVERNOR, strlen(MSMDCVS_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(MSMDCVS_GOVERNOR))) {
+            /* Display turned on. Restore if possible. */
+            if (saved_dcvs_cpu0_slack_max != -1) {
+                snprintf(tmp_str, NODE_MAX, "%d", saved_dcvs_cpu0_slack_max);
+
+                if (sysfs_write(DCVS_CPU0_SLACK_MAX_NODE, tmp_str) != 0) {
+                    if (!slack_node_rw_failed) {
+                        ALOGE("Failed to write to %s", DCVS_CPU0_SLACK_MAX_NODE);
+                    }
+
+                    rc = 1;
+                }
+            }
+
+            if (saved_dcvs_cpu0_slack_min != -1) {
+                snprintf(tmp_str, NODE_MAX, "%d", saved_dcvs_cpu0_slack_min);
+
+                if (sysfs_write(DCVS_CPU0_SLACK_MIN_NODE, tmp_str) != 0) {
+                    if (!slack_node_rw_failed) {
+                        ALOGE("Failed to write to %s", DCVS_CPU0_SLACK_MIN_NODE);
+                    }
+
+                    rc = 1;
+                }
+            }
+
+            if (saved_mpdecision_slack_max != -1) {
+                snprintf(tmp_str, NODE_MAX, "%d", saved_mpdecision_slack_max);
+
+                if (sysfs_write(MPDECISION_SLACK_MAX_NODE, tmp_str) != 0) {
+                    if (!slack_node_rw_failed) {
+                        ALOGE("Failed to write to %s", MPDECISION_SLACK_MAX_NODE);
+                    }
+
+                    rc = 1;
+                }
+            }
+
+            if (saved_mpdecision_slack_min != -1) {
+                snprintf(tmp_str, NODE_MAX, "%d", saved_mpdecision_slack_min);
+
+                if (sysfs_write(MPDECISION_SLACK_MIN_NODE, tmp_str) != 0) {
+                    if (!slack_node_rw_failed) {
+                        ALOGE("Failed to write to %s", MPDECISION_SLACK_MIN_NODE);
+                    }
+
+                    rc = 1;
+                }
+            }
+
+            slack_node_rw_failed = rc;
         }
     }
 
-    return status;
+out:
+    pthread_mutex_unlock(&hint_mutex);
 }
+
+void set_feature(struct power_module *module, feature_t feature, int state)
+{
+#ifdef TAP_TO_WAKE_NODE
+    char tmp_str[NODE_MAX];
+    if (feature == POWER_FEATURE_DOUBLE_TAP_TO_WAKE) {
+        snprintf(tmp_str, NODE_MAX, "%d", state);
+        sysfs_write(TAP_TO_WAKE_NODE, tmp_str);
+        return;
+    }
+#endif
+    set_device_specific_feature(module, feature, state);
+}
+
+int get_feature(struct power_module *module __unused, feature_t feature)
+{
+    if (feature == POWER_FEATURE_SUPPORTED_PROFILES) {
+        return get_number_of_profiles();
+    }
+    return -1;
+}
+
+static int power_open(const hw_module_t* module, const char* name,
+                    hw_device_t** device)
+{
+    ALOGD("%s: enter; name=%s", __FUNCTION__, name);
+    int retval = 0; /* 0 is ok; -1 is error */
+
+    if (strcmp(name, POWER_HARDWARE_MODULE_ID) == 0) {
+        power_module_t *dev = (power_module_t *)calloc(1,
+                sizeof(power_module_t));
+
+        if (dev) {
+            /* Common hw_device_t fields */
+            dev->common.tag = HARDWARE_DEVICE_TAG;
+            dev->common.module_api_version = POWER_MODULE_API_VERSION_0_3;
+            dev->common.hal_api_version = HARDWARE_HAL_API_VERSION;
+
+            dev->init = power_init;
+            dev->powerHint = power_hint;
+            dev->setInteractive = set_interactive;
+            dev->setFeature = set_feature;
+            dev->getFeature = get_feature;
+            dev->get_number_of_platform_modes = NULL;
+            dev->get_platform_low_power_stats = NULL;
+            dev->get_voter_list = NULL;
+
+            *device = (hw_device_t*)dev;
+        } else
+            retval = -ENOMEM;
+    } else {
+        retval = -EINVAL;
+    }
+
+    ALOGD("%s: exit %d", __FUNCTION__, retval);
+    return retval;
+}
+
+static struct hw_module_methods_t power_module_methods = {
+    .open = power_open,
+};
 
 struct power_module HAL_MODULE_INFO_SYM = {
     .common = {
         .tag = HARDWARE_MODULE_TAG,
-        .module_api_version = POWER_MODULE_API_VERSION_0_2,
+        .module_api_version = POWER_MODULE_API_VERSION_0_3,
         .hal_api_version = HARDWARE_HAL_API_VERSION,
         .id = POWER_HARDWARE_MODULE_ID,
-        .name = "QTI Power HAL",
-        .author = "QTI",
+        .name = "QCOM Power HAL",
+        .author = "Qualcomm/CyanogenMod",
         .methods = &power_module_methods,
     },
 
     .init = power_init,
     .powerHint = power_hint,
     .setInteractive = set_interactive,
-    .setFeature = set_feature
+    .setFeature = set_feature,
+    .getFeature = get_feature
 };
