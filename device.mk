@@ -124,7 +124,7 @@ PRODUCT_COPY_FILES += \
 
 #Lawnchair
 PRODUCT_PACKAGES += \
-    Lawnchair
+    ch.deletescape.lawnchair.plah
 
 # LiveDisplay HAL
 PRODUCT_PACKAGES += \
