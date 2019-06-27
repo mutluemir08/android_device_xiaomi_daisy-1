@@ -74,6 +74,10 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.target.rc
 
+# Disable hardware overlays permanently
+PRODUCT_PACKAGES += \
+    10disablehw
+
 # Display
 PRODUCT_PACKAGES += \
     vendor.display.config@1.0
@@ -98,6 +102,15 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system
 
+# Hostapd fix
+PRODUCT_PACKAGES += \
+    01hostapd_fix
+    #hostapd_fix
+
+# init.d
+PRODUCT_PACKAGES += \
+    sysinit
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
@@ -108,26 +121,21 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/keylayout/uinput-goodix.kl:system/usr/keylayout/uinput-goodix.kl
 
+#Lawnchair
+PRODUCT_PACKAGES += \
+    Lawnchair
+
 # LiveDisplay HAL
 PRODUCT_PACKAGES += \
     lineage.livedisplay@2.0-service-sdm
-
-# Power
-PRODUCT_PACKAGES += \
-    power.qcom
 
 # Offmode charging
 PRODUCT_PACKAGES += \
     chargeonlymode
 
-# Hostapd fix
+# Power
 PRODUCT_PACKAGES += \
-    01hostapd_fix
-    #hostapd_fix
-
-# init.d
-PRODUCT_PACKAGES += \
-    sysinit
+    power.qcom
 
 # QCOM
 PRODUCT_COPY_FILES += \
@@ -172,7 +180,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# Disable hardware overlays permanently
-PRODUCT_PACKAGES += \
-    10disablehw
