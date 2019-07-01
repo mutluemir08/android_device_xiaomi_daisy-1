@@ -40,7 +40,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import org.lineageos.settings.R;
+import org.lineageos.settings.doze.R;
 
 public class DozeSettingsFragment extends PreferenceFragment implements OnPreferenceChangeListener {
 
