@@ -134,6 +134,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     chargeonlymode
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:system/etc/media_profiles_V1_0.xml
+
 # Power
 PRODUCT_PACKAGES += \
     power.qcom
