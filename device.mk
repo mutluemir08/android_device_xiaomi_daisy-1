@@ -103,8 +103,10 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0_system
 
 # Hostapd fix
-PRODUCT_PACKAGES += \
-    01hostapd_fix
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/wifi/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
+    $(LOCAL_PATH)/wifi/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
 
 # init.d
 PRODUCT_PACKAGES += \
