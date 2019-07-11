@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="proximity_sensor"
+        android:title="@string/proximity_sensor_title">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="key_doze_handwave"
+            android:title="@string/hand_wave_gesture_title"
+            android:summary="@string/hand_wave_gesture_summary"
+            android:icon="@drawable/ic_hand" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="key_doze_pocket"
+            android:title="@string/pocket_gesture_title"
+            android:summary="@string/pocket_gesture_summary"
+            android:icon="@drawable/ic_pocket" />
+    </PreferenceCategory>
+</PreferenceScreen>

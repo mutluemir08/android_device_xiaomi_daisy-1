@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Wed Jul 10 09:57:43 EEST 2019
+1.base=/home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/build/intermediates/transforms/dexMerger/debug/2
+2.path=classes.dex
+0.baseType=DIRECTORY
+2.base=/home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/build/intermediates/transforms/dexMerger/debug/1
+2.set=DEX
+1.baseType=DIRECTORY
+count=3
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=/home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/build/intermediates/transforms/dexMerger/debug/0
+2.baseType=DIRECTORY
+1.path=classes.dex

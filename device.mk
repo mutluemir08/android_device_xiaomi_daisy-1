@@ -84,7 +84,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    XiaomiDoze
+    phh_Doze
 
 # FM
 PRODUCT_PACKAGES += \
@@ -105,7 +105,6 @@ PRODUCT_PACKAGES += \
 # Hostapd fix
 PRODUCT_PACKAGES += \
     01hostapd_fix
-    #hostapd_fix
 
 # init.d
 PRODUCT_PACKAGES += \

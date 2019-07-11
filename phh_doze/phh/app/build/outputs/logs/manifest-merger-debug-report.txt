@@ -1,0 +1,259 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:2:1-54:12
+MERGED from [com.android.support:support-v4:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/b9ed0310553a492c39651731264d6316/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4232ef737aeb83322f5343477b7d7e4f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/9ca7931f1e1c333f7507aae62bab37cf/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/9c21ac30c68df23cce76c6f8ba15adb0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/712b05e37660ea2b0c3e8d362ab4ceab/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/7957722a08a7406444845603e7c184ec/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/ce5349dfc140e84c14892a0447987d17/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/963693fdc2e8d6326bdb0e3a846ec875/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/18ade12f8f8354c914fbd8224d766522/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/dcf14754b8802c28f83624bc78ac5827/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/9b74b43529cd0e6ddbe443ee231ebb93/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/98f8771a82e6ec9af1852f7007fd0de7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/f9cc932f1c0c4503b7bbee68d415399a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/629f44ed0b08a9b3f7c97d4df918f3c2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bc32c14dc82238c8684caf919b174b4d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/54b6a81c36473ef34c8733a117bd9bd2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4a27b552f4971cab6fc0e926d3ae875d/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/74d1f84b034438aedaf423408319800b/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/e561a9651987d1c184590ab212b626a4/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/bd6786aec8f1e848c2a223f64c40459a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5d6f3228ec0e678b27317bed89881bac/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/46b709ca1be9787e7ababc42d6fc6b2e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/abbd4deef4b8877b0730968d884b37e2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/626c0d8471ede612b4a6879fed371685/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/0c86d340d77b9193588a726e3b706cc8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/88c0838fb090105419b9c337c81b3ba6/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/3d120b1aa76343b6c8b1d128bf21a0ed/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/f6e587f950b54033b65ac257843345ba/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:2:1-54:12
+	package
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+		INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+	android:sharedUserId
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:5:5-46
+	android:versionName
+		INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:2:1-54:12
+		INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:2:1-54:12
+		INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:2:11-69
+	android:persistent
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:4:5-30
+uses-permission#android.permission.INTERACT_ACROSS_USERS
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:8:22-77
+application
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:9:5-52:19
+MERGED from [com.android.support:support-compat:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4a27b552f4971cab6fc0e926d3ae875d/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4a27b552f4971cab6fc0e926d3ae875d/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/74d1f84b034438aedaf423408319800b/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/74d1f84b034438aedaf423408319800b/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4a27b552f4971cab6fc0e926d3ae875d/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:12:9-41
+	android:roundIcon
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:13:9-54
+	android:icon
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:10:9-35
+uses-library#android.hardware.wifi.hostapd.V1_0
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:16:9-100
+	android:required
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:16:73-97
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:16:23-72
+uses-library#vendor.huawei.hardware.biometrics.fingerprint.V2_1
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:17:9-115
+	android:required
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:17:89-113
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:17:23-88
+uses-library#vendor.huawei.hardware.tp.V1_0
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:18:9-95
+	android:required
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:18:69-93
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:18:23-68
+uses-library#vendor.qti.hardware.radio.am.V1_0
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:19:9-98
+	android:required
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:19:72-96
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:19:23-71
+uses-library#vendor.qti.qcril.am.V1_0
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:20:9-89
+	android:required
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:20:63-87
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:20:23-62
+service#me.phh.treble.app.EntryService
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:22:9-49
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:22:18-46
+receiver#me.phh.treble.app.Starter
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:24:9-29:20
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:24:19-42
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:25:13-28:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:26:17-79
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:26:25-76
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:27:17-84
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:27:25-81
+activity-alias#me.phh.treble.app.TopLevelSettingsActivity
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:31:2-41:26
+	android:enabled
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:31:18-40
+	android:exported
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:31:41-64
+	android:targetActivity
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:31:106-148
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:31:65-105
+intent-filter#action:name:com.android.settings.action.IA_SETTINGS+category:name:android.intent.category.DEFAULT
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:32:13-35:29
+action#com.android.settings.action.IA_SETTINGS
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:33:17-81
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:33:25-79
+category#android.intent.category.DEFAULT
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:34:17-75
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:34:27-73
+meta-data#com.android.settings.category
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:36:13-128
+	android:value
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:36:69-126
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:36:24-68
+meta-data#com.android.settings.summary
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:37:13-120
+	android:resource
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:37:68-118
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:37:24-67
+meta-data#com.android.settings.title
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:38:13-119
+	android:resource
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:38:66-117
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:38:24-65
+meta-data#com.android.settings.icon
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:39:13-111
+	android:resource
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:39:65-109
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:39:24-64
+meta-data#com.android.settings.order
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:40:13-88
+	android:value
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:40:66-86
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:40:24-65
+activity#me.phh.treble.app.SettingsActivity
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:43:9-51:20
+	android:label
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:45:13-58
+	android:theme
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:46:13-44
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:44:13-45
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:47:13-50:29
+action#android.intent.action.MAIN
+ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:48:17-69
+	android:name
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml:48:25-66
+uses-sdk
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:support-v4:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/b9ed0310553a492c39651731264d6316/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/b9ed0310553a492c39651731264d6316/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4232ef737aeb83322f5343477b7d7e4f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4232ef737aeb83322f5343477b7d7e4f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/9ca7931f1e1c333f7507aae62bab37cf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/9ca7931f1e1c333f7507aae62bab37cf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/9c21ac30c68df23cce76c6f8ba15adb0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/9c21ac30c68df23cce76c6f8ba15adb0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/712b05e37660ea2b0c3e8d362ab4ceab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/712b05e37660ea2b0c3e8d362ab4ceab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/7957722a08a7406444845603e7c184ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/7957722a08a7406444845603e7c184ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/ce5349dfc140e84c14892a0447987d17/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/ce5349dfc140e84c14892a0447987d17/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/963693fdc2e8d6326bdb0e3a846ec875/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/963693fdc2e8d6326bdb0e3a846ec875/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/18ade12f8f8354c914fbd8224d766522/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/18ade12f8f8354c914fbd8224d766522/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/dcf14754b8802c28f83624bc78ac5827/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/dcf14754b8802c28f83624bc78ac5827/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/9b74b43529cd0e6ddbe443ee231ebb93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/9b74b43529cd0e6ddbe443ee231ebb93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/98f8771a82e6ec9af1852f7007fd0de7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/98f8771a82e6ec9af1852f7007fd0de7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/f9cc932f1c0c4503b7bbee68d415399a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/f9cc932f1c0c4503b7bbee68d415399a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/629f44ed0b08a9b3f7c97d4df918f3c2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/629f44ed0b08a9b3f7c97d4df918f3c2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bc32c14dc82238c8684caf919b174b4d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bc32c14dc82238c8684caf919b174b4d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/54b6a81c36473ef34c8733a117bd9bd2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/54b6a81c36473ef34c8733a117bd9bd2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4a27b552f4971cab6fc0e926d3ae875d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4a27b552f4971cab6fc0e926d3ae875d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/74d1f84b034438aedaf423408319800b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/74d1f84b034438aedaf423408319800b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/e561a9651987d1c184590ab212b626a4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/e561a9651987d1c184590ab212b626a4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/bd6786aec8f1e848c2a223f64c40459a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/bd6786aec8f1e848c2a223f64c40459a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5d6f3228ec0e678b27317bed89881bac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5d6f3228ec0e678b27317bed89881bac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/46b709ca1be9787e7ababc42d6fc6b2e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/46b709ca1be9787e7ababc42d6fc6b2e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/abbd4deef4b8877b0730968d884b37e2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/abbd4deef4b8877b0730968d884b37e2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/626c0d8471ede612b4a6879fed371685/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/osboxes/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/626c0d8471ede612b4a6879fed371685/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/0c86d340d77b9193588a726e3b706cc8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/0c86d340d77b9193588a726e3b706cc8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/88c0838fb090105419b9c337c81b3ba6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/88c0838fb090105419b9c337c81b3ba6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/3d120b1aa76343b6c8b1d128bf21a0ed/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/3d120b1aa76343b6c8b1d128bf21a0ed/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/f6e587f950b54033b65ac257843345ba/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/osboxes/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/f6e587f950b54033b65ac257843345ba/AndroidManifest.xml:20:5-44
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+		INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+		ADDED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
+		INJECTED from /home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/src/main/AndroidManifest.xml
