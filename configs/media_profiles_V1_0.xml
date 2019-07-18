@@ -149,7 +149,6 @@
                    channels="1" />
         </EncoderProfile>
 
-<<<<<<< HEAD
         <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="42000000"
@@ -162,8 +161,6 @@
                    channels="2" />
         </EncoderProfile>
 
-=======
->>>>>>> 180e7b1... daisy: Import stock media profiles configuration
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="192000"
@@ -354,15 +351,9 @@
          or query the capabilities of the codec at all if it is disabled
     -->
     <VideoEncoderCap name="h264" enabled="true"
-<<<<<<< HEAD
         minBitRate="64000" maxBitRate="42000000"
         minFrameWidth="176" maxFrameWidth="3840"
         minFrameHeight="144" maxFrameHeight="2160"
-=======
-        minBitRate="64000" maxBitRate="40000000"
-        minFrameWidth="176" maxFrameWidth="1920"
-        minFrameHeight="144" maxFrameHeight="1080"
->>>>>>> 180e7b1... daisy: Import stock media profiles configuration
         minFrameRate="15" maxFrameRate="30" />
 
     <VideoEncoderCap name="h263" enabled="true"

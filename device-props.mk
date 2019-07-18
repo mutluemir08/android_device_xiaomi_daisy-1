@@ -100,6 +100,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ro.telephony.default_network=22,20
 
+# Spectrum
+PRODUCT_PROPERTY_OVERRIDES += \
+    spectrum.support=1 \
+
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true

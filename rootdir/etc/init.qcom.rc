@@ -1,3 +1,5 @@
+import /vendor/etc/init/hw/init.spectrum.rc
+
 on init
     mount none /sbin/chargeonlymode /sbin/charger bind
 
