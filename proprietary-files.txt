@@ -269,23 +269,3 @@ lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
 lib64/vendor.xiaomi.hardware.mtdservice@1.1.so
-
-# HBTP
-#bin/hbtp_daemon
-#etc/hbtp/hbtpcfg.dat
-#etc/hbtp/hbtpcfg_msm8953_800s_fhd.dat
-#etc/hbtp/hbtpcfg_sdm450_801s_fhdp.dat
-#etc/hbtp/hbtpcfg2.dat
-#etc/hbtp/loader.cfg
-#etc/hbtp/qtc800h.bin
-#etc/hbtp/qtc800s_dsp.bin
-#lib/libfastrpc_utf_stub.so
-#lib/libhbtpclient.so
-#lib/libhbtpdsp.so
-#lib/libhbtpfrmwk.so
-lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
-#lib64/libfastrpc_utf_stub.so
-#lib64/libhbtpclient.so
-#lib64/libhbtpdsp.so
-#lib64/libhbtpfrmwk.so
-lib64/vendor.qti.hardware.improvetouch.gesturemanager@1.0-service.so
