@@ -43,3 +43,17 @@ on post-fs-data
     chmod 0755 /system/etc/init.d/01hostapd_fix
 #    start hostapd_fix
     start sysinit
+
+on property:persist.camera.HAL3.enabled=0
+    setprop persist.vendor.camera.HAL3.enabled 0
+    stop vendor.camera-provider-2-4
+    stop cameraserver
+    start vendor.camera-provider-2-4
+    start cameraserver
+
+on property:persist.camera.HAL3.enabled=1
+    setprop persist.vendor.camera.HAL3.enabled 1
+    stop vendor.camera-provider-2-4
+    stop cameraserver
+    start vendor.camera-provider-2-4
+    start cameraserver

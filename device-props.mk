@@ -6,7 +6,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.CDS=off \
     persist.camera.eis.enabled=1 \
-    persist.camera.HAL3.enabled=1 \
     persist.camera.video.CDS=off \
     persist.vendor.camera.display.lmax=1280x720 \
     persist.vendor.camera.display.umax=1920x1080 \
