@@ -74,10 +74,6 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.target.rc
 
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    AdvancedSettings
-
 # Disable hardware overlays permanently
 PRODUCT_PACKAGES += \
     10disablehw
