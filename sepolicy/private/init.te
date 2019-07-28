@@ -7,3 +7,6 @@ allow init vendor_configs_file:file mounton;
 
 # Allow init to mount offmode charging daemon
 allow init rootfs:file mounton;
+
+#Spectrum profiles support
+allow init sysfs:file {read write};
