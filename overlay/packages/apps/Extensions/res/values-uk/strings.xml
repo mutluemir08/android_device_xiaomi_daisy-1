@@ -556,6 +556,8 @@
     <string name="gesture_swipe_length_summary">Висота від низу до тригеру свайпу</string>
     <string name="gesture_action_timeout_title">Час очікування тригеру свайпу</string>
     <string name="gesture_action_timeout_summary">Час очікування до початку дії жесту</string>
+    <string name="long_swipe_screen_off_title">Вимкнення екрану</string>
+    <string name="long_swipe_screen_off_summary">Проведіть вгору зліва та справа та утримайте для вимкнення екрану</string>
     <!-- Recents icon packs -->
     <string name="recents_icon_pack_title">Набір іконок</string>
     <string name="recents_icon_pack_summary">Застосувати користувацький набір іконок для панелі нещодавніх додатків</string>

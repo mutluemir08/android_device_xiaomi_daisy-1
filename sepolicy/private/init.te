@@ -9,4 +9,4 @@ allow init vendor_configs_file:file mounton;
 allow init rootfs:file mounton;
 
 #Spectrum profiles support
-allow init sysfs:file {read write};
+allow init sysfs:file { read write };

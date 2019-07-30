@@ -1,4 +1,4 @@
-import /vendor/etc/init/hw/init.spectrum.rc
+import /system/etc/init/init.spectrum.rc
 
 on property:init.svc.vendor.cnss_diag=running
     stop vendor.cnss_diag

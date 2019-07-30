@@ -556,6 +556,8 @@
     <string name="gesture_swipe_length_summary">Необходимая высота снизу для работы с жестами</string>
     <string name="gesture_action_timeout_title">Время обработки жеста</string>
     <string name="gesture_action_timeout_summary">Время ожидания до начала выполнения жест</string>
+    <string name="long_swipe_screen_off_title">Выключение экрана</string>
+    <string name="long_swipe_screen_off_summary">Смахивание вверх слева и справа с удержанием выключает экран</string>
     <!-- Recents icon packs -->
     <string name="recents_icon_pack_title">Набор значков</string>
     <string name="recents_icon_pack_summary">Применить пользовательский набор значков для панели недавних приложений</string>
