@@ -236,7 +236,9 @@ public class GestureButton implements PointerEventListener {
                             if (DEBUG) Slog.i(TAG, "swipe: moveDistanceSinceDown = " + moveDistanceSinceDown);
                             mLongSwipePossible = true;
                             if (moveDistanceSinceLast < mMoveTolerance) {
-				if (mPreparedKeycode == KeyEvent.KEYCODE_BACK) {
+				boolean long_swipe = Settings.System.getIntForUser(mContext.getContentResolver(),
+					Settings.System.OMNI_LONG_SWIPE_SCREEN_OFF, 0, UserHandle.USER_CURRENT) == 1;
+				if (mPreparedKeycode == KeyEvent.KEYCODE_BACK && long_swipe) {
 				    mPreparedKeycode = KeyEvent.KEYCODE_POWER;
 				    mGestureButtonHandler.sendEmptyMessage(MSG_SEND_KEY);
 				} else if (!mRecentsTriggered) {

@@ -101,8 +101,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=22,20
 
 # Spectrum
-PRODUCT_PROPERTY_OVERRIDES += \
-    spectrum.support=1 \
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    spectrum.support=1 \
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -442,11 +442,12 @@
     <string name="button_backlight_on_touch_only_title">Button backlight touch</string>
     <string name="button_backlight_on_touch_only_summary">Button backlight will only appear when buttons are pressed rather than on all the time. Timeout still impacts this feature.</string>
 
-    <!-- Ambient display music ticker -->
-    <string name="force_ambient_for_media_pref_title">Ambient music ticker</string>
-    <string name="force_ambient_for_media_pref_summary">Configure the Ambient music ticker</string>
-    <string name="ambient_ticker_footer">Ambient Music Ticker shows playing music track info within Ambient display screen.\n\nIt\'s triggered also if Ambient Display is disabled when a new track is started, forcing a clean ambient screen with track info in the middle of the screen.\n\nYou can also double tap on track info to skip track.\n\nIf you own a Pixel and enable Now Playing and its notification in system Audio settings, Ambient Music Ticker will also work within it.</string>
-    <string name="force_ambient_for_media_title">Enable</string>
+    <!-- Ambient Music Ticker -->
+    <string name="force_ambient_for_media_pref_title">Ambient Music Ticker</string>
+    <string name="force_ambient_for_media_pref_summary">Configure the Ambient Music Ticker</string>
+    <string name="ambient_ticker_footer">Ambient Music Ticker shows playing music track info on the lock screen and ambient screen.\n\nIt\'s triggered also if Ambient Display is disabled when a new track is started, forcing a clean ambient screen with track info in the middle of the screen.\n\nYou can also double tap on the track info to skip to the next track.\n\nIf you own a Pixel (2nd generation and higher) and enable \"Now Playing\" and its notification in system Audio settings, Ambient Music Ticker will also work within it.</string>
+    <string name="force_ambient_for_media_title">Show music ticker on lock screen</string>
+    <string name="ambient_title">Ambient Music</string>
 
     <!-- Quick Settings brightness icon -->
     <string name="brightness_icon_title">Adaptive brightness button</string>
@@ -723,4 +724,34 @@
     <!-- AEX logo -->
     <string name="aex_logo_title">AEX logo</string>
     <string name="aex_logo_summary">Let everyone know that you\'re using AEX when they see your screen</string>
+
+    <!-- Gaming mode -->
+    <string name="gaming_mode_title">Gaming Mode</string>
+    <string name="gaming_mode_summary">Customize gaming mode preferences</string>
+    <string name="gaming_mode_master_title">Enable Gaming Mode features</string>
+    <string name="gaming_mode_master_summary">Allow to customize Gaming Mode options</string>
+    <string name="gaming_mode_app_picker_title">Automatically turn on for these apps</string>
+    <string name="add_gaming_mode_package_title">Add apps for Gaming Mode</string>
+    <string name="add_gaming_mode_package_summary">Gaming mode will automatically be turned on for the selected apps.</string>
+    <string name="gaming_mode_headsup_title">Block notifications</string>
+    <string name="gaming_mode_headsup_summary">Block all headsup messages except calls.</string>
+    <string name="gaming_mode_hardware_keys_title">Lock buttons</string>
+    <string name="gaming_mode_hardware_keys_summary">Disable hardware buttons when Gaming mode is turned on.</string>
+    <string name="gaming_mode_gestures_title">Disable gestures</string>
+    <string name="gaming_mode_gestures_summary">Disable gesture navigation when Gaming mode is turned on.</string>
+    <string name="gaming_mode_brightness_title">Disable automatic brightness</string>
+    <string name="gaming_mode_brightness_summary">Lock screen brightness when Gaming mode is turned on.</string>
+    <string name="gaming_mode_ringer_title">Ringer in gaming mode</string>
+    <string name="gaming_mode_ringer_off_title">Do not change</string>
+    <string name="gaming_mode_ringer_vibrate_title">Vibrate</string>
+    <string name="gaming_mode_ringer_dnd_title">Do Not Disturb</string>
+    <string name="gaming_mode_ringer_silent_title">Silent</string>
+    <string name="gaming_mode_notifications_title">Notifications</string>
+    <string name="gaming_mode_notifications_off_title">Disabled</string>
+    <string name="gaming_mode_notifications_notif_title">Show notification</string>
+    <string name="gaming_mode_notifications_toast_title">Show toasts</string>
+    <string name="gaming_mode_notifications_all_title">Show toasts and notifications</string>
+    <string name="gaming_mode_dynamic_title">Dynamic Gaming mode</string>
+    <string name="gaming_mode_dynamic_summary">Whenever you open any app and the system finds it to be a game, it will be added in gaming list automatically. Please note that this does not work for every game app.</string>
+
 </resources>

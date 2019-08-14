@@ -227,6 +227,7 @@
     <string name="battery_light_full_color">Почти полный заряд батареи</string>
     <string name="battery_light_reallyfull_color">Полный заряд батареи (100%)</string>
     <!-- Notifications LED -->
+    <string name="notification_light_settings">Индикация уведомлений</string>
     <string name="notification_light_summary">Настройка индикации светодиодом для каждого приложения</string>
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Информация о зарядке</string>
@@ -345,6 +346,11 @@
     <string name="lockscreen_clock_selection_analog">Аналоговые</string>
     <string name="lockscreen_clock_selection_sammy">Вертикальные</string>
     <string name="lockscreen_clock_selection_sammy_bold">Вертикальные (жирные)</string>
+    <string name="lockscreen_clock_selection_sammy_accent">Сэмми с акцентом</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">Sammy с акцентом (альтернативный)</string>
+    <string name="lockscreen_clock_selection_gradient_full">Часы с полным градиентом</string>
+    <string name="lockscreen_clock_selection_gradient_likeqs">Часы с монохромным градиентом</string>
+    <string name="lockscreen_clock_selection_text">Текстовые Часы из Android Q</string>
     <!-- Weather -->
     <string name="weather_title">Погода</string>
     <string name="weather_unit">Единицы измерения</string>
@@ -606,23 +612,48 @@
     <string name="volume_pannel_general">Основные</string>
     <string name="volume_pannel_misc">Разное</string>
     <!-- Display cutout options -->
-    <string name="cutout_main">Монобровь</string>
-    <string name="cutout_main_summary">Настройки отображения моноброви</string>
-    <string name="display_cutout_style_title">Стиль отображения</string>
-    <string name="display_cutout_style_normal">Нормальный</string>
-    <string name="display_cutout_style_immerse">Погружение</string>
-    <string name="display_cutout_style_hide">Скрытие</string>
-    <string name="stock_statusbar_in_hide">Высота строки состояния по умолчанию</string>
-    <string name="stock_statusbar_in_hide_summary">Использовать стандартную высоту строки состояния в режиме скрытия моноброви</string>
-
+    <string name="cutout_main">Настройки отображения выреза</string>
+    <string name="cutout_main_summary">Они действительно режут этим углы</string>
+    <string name="display_cutout_style_title">Стиль выреза</string>
+    <string name="display_cutout_style_normal">Обычный</string>
+    <string name="display_cutout_style_immerse">Погруженный</string>
+    <string name="display_cutout_style_hide">Скрыт</string>
+    <string name="stock_statusbar_in_hide">Стандартная высота панели уведомлений</string>
+    <string name="stock_statusbar_in_hide_summary">Использовать стандартную высоту панели уведомлений в стиле «Скрыт»</string>
     <!-- IconPack Preference -->
     <string name="default_iconpack_title">По умолчанию</string>
-
     <!-- Heads up options -->
     <string name="less_boring_heads_up_title">Менее надоедливые всплывающие уведомления</string>
     <string name="less_boring_heads_up_summary">Показывать всплывающие уведомления только для приложений телефона и сообщений, если они находятся в фоне</string>
-
     <!-- AEX logo -->
     <string name="aex_logo_title">AEX лого</string>
     <string name="aex_logo_summary">Пусть все знают, что Вы используете AEX, когда смотрят на экран Вашего телефона</string>
+<!-- Gaming mode -->
+    <string name="gaming_mode_title">Игровой режим</string>
+    <string name="gaming_mode_summary">Настройки Игрового режима</string>
+    <string name="gaming_mode_master_title">Включить настройки Игрового режима</string>
+    <string name="gaming_mode_master_summary">Разрешить изменение настроек Игрового режима</string>
+    <string name="gaming_mode_app_picker_title">Автоматическое включение для избранных приложений</string>
+    <string name="add_gaming_mode_package_title">Добавить приложение</string>
+    <string name="add_gaming_mode_package_summary">Игровой режим будет включаться автоматически для указанных приложений</string>
+    <string name="gaming_mode_headsup_title">Блокировать уведомления</string>
+    <string name="gaming_mode_headsup_summary">Блокировать все уведомления Heads Up, кроме звонков</string>
+    <string name="gaming_mode_hardware_keys_title">Блокировать кнопки</string>
+    <string name="gaming_mode_hardware_keys_summary">Блокировать аппаратные кнопки в Игровом режиме</string>
+    <string name="gaming_mode_gestures_title">Выключить жесты</string>
+    <string name="gaming_mode_gestures_summary">Выключать жесты в Игровом режиме</string>
+    <string name="gaming_mode_brightness_title">Выключить автояркость</string>
+    <string name="gaming_mode_brightness_summary">Фиксировать яркость экрана в Игровом режиме</string>
+    <string name="gaming_mode_ringer_title">Звонок в игровом режиме</string>
+    <string name="gaming_mode_ringer_off_title">Не менять</string>
+    <string name="gaming_mode_ringer_vibrate_title">Вибрировать</string>
+    <string name="gaming_mode_ringer_dnd_title">Не беспокоить</string>
+    <string name="gaming_mode_ringer_silent_title">Тихо</string>
+    <string name="gaming_mode_notifications_title">Уведомления</string>
+    <string name="gaming_mode_notifications_off_title">Отключить</string>
+    <string name="gaming_mode_notifications_notif_title">Показывать уведомления Heads Up</string>
+    <string name="gaming_mode_notifications_toast_title">Показывать всплывающие уведомления</string>
+    <string name="gaming_mode_notifications_all_title">Показывать всплывающие уведомления и Heads Up</string>
+    <string name="gaming_mode_dynamic_title">Динамический Игровой режим</string>
+    <string name="gaming_mode_dynamic_summary">Если вы запустите приложение, и система обнаружит, что это игра, оно будет добавлено в список избранных автоматически. Пожалуйста, имейте в виду, что это может не работать для каждого приложения</string>
 </resources>

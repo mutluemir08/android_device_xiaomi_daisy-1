@@ -16,7 +16,6 @@
      output, insert an eat-comment element after the comment lines.
 -->
 <resources>
-
     <!-- Header. -->
     <string name="text_clock_header_one">Сейчас</string>
     <string name="text_clock_header_few">Сейчас</string>
@@ -109,5 +108,4 @@
     <string name="text_clock_minutes_fiftyseven">Пятьдесят семь</string>
     <string name="text_clock_minutes_fiftyeight">Пятьдесят восемь</string>
     <string name="text_clock_minutes_fiftynine">Пятьдесят девять</string>
-
 </resources>

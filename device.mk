@@ -74,6 +74,12 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.target.rc
 
+# Dirac
+#PRODUCT_PACKAGES += \
+#   DiracControl
+#PRODUCT_COPY_FILES += \
+#   $(LOCAL_PATH)/audio/audio_effects.xml:system/etc/audio_effects.xml
+
 # Disable hardware overlays permanently
 PRODUCT_PACKAGES += \
     10disablehw
@@ -148,8 +154,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # Spectrum
-PRODUCT_PACKAGES += \
-    init.spectrum.rc
+#PRODUCT_PACKAGES += \
+#    init.spectrum.rc
 
 # Telephony
 PRODUCT_BOOT_JARS += \

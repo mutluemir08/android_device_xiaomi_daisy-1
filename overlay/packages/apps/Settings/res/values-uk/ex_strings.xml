@@ -431,7 +431,6 @@
     <string name="color_red_title">Червоний</string>
     <string name="color_green_title">Зелений</string>
     <string name="color_blue_title">Синій</string>
-
     <!-- LiveDisplay : Picture Adjustment -->
     <string name="picture_adjustment_title">Налаштування зображення</string>
     <string name="picture_adjustment_summary">Налаштування відтінку, насиченості, інтенсивності та контрасту</string>
@@ -439,10 +438,8 @@
     <string name="adj_saturation_title">Насиченість</string>
     <string name="adj_intensity_title">Інтенсивність</string>
     <string name="adj_contrast_title">Контраст</string>
-
     <!-- LiveDisplay - Custom theme mode -->
     <string name="systemui_theme_time">Автоматично (час доби)</string>
-
     <!-- Pocket judge -->
     <string name="pocket_judge_title">Режим В кишені</string>
     <string name="pocket_judge_summary">Блокувати екран та кнопки, якщо пристрій знаходиться в кишені</string>

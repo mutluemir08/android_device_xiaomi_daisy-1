@@ -227,6 +227,7 @@
     <string name="battery_light_full_color">Майже повний заряд батареї</string>
     <string name="battery_light_reallyfull_color">Повний (100) заряд</string>
     <!-- Notifications LED -->
+    <string name="notification_light_settings">LED світло сповіщень</string>
     <string name="notification_light_summary">Налаштувати сповіщення кольором для різних додатків</string>
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Інформація про заряджання на екрані блокування</string>
@@ -345,6 +346,11 @@
     <string name="lockscreen_clock_selection_analog">Аналоговий</string>
     <string name="lockscreen_clock_selection_sammy">Вертикальний</string>
     <string name="lockscreen_clock_selection_sammy_bold">Вертикальний (жирний)</string>
+    <string name="lockscreen_clock_selection_sammy_accent">Sammy з акцентом</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">Sammy з акцентом (альтернативний)</string>
+    <string name="lockscreen_clock_selection_gradient_full">Годинник з повним градієнтом</string>
+    <string name="lockscreen_clock_selection_gradient_likeqs">Годинник з монохромним градієнтом</string>
+    <string name="lockscreen_clock_selection_text">Текстовий годинник із Android Q</string>
     <!-- Weather -->
     <string name="weather_title">Погода</string>
     <string name="weather_unit">Одиниця температури</string>
@@ -606,22 +612,19 @@
     <string name="volume_pannel_general">Загальні</string>
     <string name="volume_pannel_misc">Інше</string>
     <!-- Display cutout options -->
-    <string name="cutout_main">Монобрів</string>
-    <string name="cutout_main_summary">Налаштування відображення моноброву</string>
-    <string name="display_cutout_style_title">Стиль відображення</string>
-    <string name="display_cutout_style_normal">Нормальний</string>
-    <string name="display_cutout_style_immerse">Занурення</string>
-    <string name="display_cutout_style_hide">Приховування</string>
-    <string name="stock_statusbar_in_hide">Висота рядку стану за замовчуванням</string>
-    <string name="stock_statusbar_in_hide_summary">Використовувати стандартну висоту рядку стану в режимі приховування моноброву</string>
-
+    <string name="cutout_main">Налаштування відображення вирізу</string>
+    <string name="cutout_main_summary">Вони справді зрізають цим кути</string>
+    <string name="display_cutout_style_title">Стиль вирізу</string>
+    <string name="display_cutout_style_normal">Звичайний</string>
+    <string name="display_cutout_style_immerse">Занурений</string>
+    <string name="display_cutout_style_hide">Приховати</string>
+    <string name="stock_statusbar_in_hide">Стандартна висота панелі стану</string>
+    <string name="stock_statusbar_in_hide_summary">Використовувати стандартну  висоту рядку стану якщо в режимі \"Приховано\"</string>
     <!-- IconPack Preference -->
     <string name="default_iconpack_title">За замовчуванням</string>
-
     <!-- Heads up options -->
     <string name="less_boring_heads_up_title">Менш набридливі спливаючі сповіщення</string>
     <string name="less_boring_heads_up_summary">Показувати спливаючі сповіщення тільки для додатків телефону та повідомлень, якщо вони знаходяться в фоновому режимі</string>
-
     <!-- AEX logo -->
     <string name="aex_logo_title">AEX лого</string>
     <string name="aex_logo_summary">Нехая всі знають, що Ви використовуєте AEX, коли дивляться на екран Вашого телефону</string>

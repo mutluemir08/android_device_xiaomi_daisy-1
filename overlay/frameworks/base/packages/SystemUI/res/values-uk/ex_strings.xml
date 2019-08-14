@@ -250,7 +250,6 @@
     <string name="accessibility_quick_settings_ambient_display_changed_on">Розширений дисплей увімкнено.</string>
     <!-- Volume panel QS tile -->
     <string name="quick_settings_volume_panel_label">Панель гучності</string>
-
     <!-- Reader mode QS tile -->
     <string name="quick_settings_reading_mode">Режим читання</string>
     <string name="accessibility_quick_settings_reading_mode_on">Режим читання увімк.</string>
