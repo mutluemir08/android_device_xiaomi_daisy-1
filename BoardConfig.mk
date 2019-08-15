@@ -15,6 +15,9 @@
 # limitations under the License.
 #
 
+# Inherit from common msm8953-common
+#-include device/xiaomi/msm8953-common/BoardConfigCommon.mk
+
 BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/daisy

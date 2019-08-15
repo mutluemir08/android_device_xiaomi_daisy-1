@@ -17,6 +17,9 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
+# Inherit from msm8953-common
+#$(call inherit-product, device/xiaomi/msm8953-common/msm8953.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/daisy/daisy-vendor.mk)
 
@@ -73,12 +76,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.target.rc
-
-# Dirac
-#PRODUCT_PACKAGES += \
-#   DiracControl
-#PRODUCT_COPY_FILES += \
-#   $(LOCAL_PATH)/audio/audio_effects.xml:system/etc/audio_effects.xml
 
 # Disable hardware overlays permanently
 PRODUCT_PACKAGES += \
@@ -152,10 +149,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
-
-# Spectrum
-#PRODUCT_PACKAGES += \
-#    init.spectrum.rc
 
 # Telephony
 PRODUCT_BOOT_JARS += \

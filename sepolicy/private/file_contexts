@@ -1,6 +1,6 @@
 # Audio
-/persist/audio(/.*)?                          u:object_r:persist_audio_file:s0
-/mnt/vendor/persist/audio(/.*)?               u:object_r:persist_audio_file:s0
+#/persist/audio(/.*)?                          u:object_r:persist_audio_file:s0
+#/mnt/vendor/persist/audio(/.*)?               u:object_r:persist_audio_file:s0
 
 # Data files
 /data/display(/.*)?                 		u:object_r:display_data_file:s0
