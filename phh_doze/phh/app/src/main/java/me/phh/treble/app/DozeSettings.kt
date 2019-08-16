@@ -29,27 +29,27 @@ class DozeSettingsFragment : PreferenceFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         addPreferencesFromResource(R.xml.pref_doze)
-        
-        val dozeEnabled = isDozeEnabled(getActivity())
 
-        val proximitySensorCategory = getPreferenceScreen().findPreference(proxyKey) as PreferenceCategory
+        val dozeEnabled = isDozeEnabled(activity)
+
+        val proximitySensorCategory = preferenceScreen.findPreference(proxyKey) as PreferenceCategory
 
         val mHandwavePreference = findPreference(handwaveKey) as SwitchPreference
-        mHandwavePreference.setEnabled(dozeEnabled)
+        mHandwavePreference.isEnabled = dozeEnabled
 
         val mPocketPreference = findPreference(pocketKey) as SwitchPreference
-        mPocketPreference.setEnabled(dozeEnabled)
+        mPocketPreference.isEnabled = dozeEnabled
 
         // Hide proximity sensor related features if the device doesn't support them
-        if (!getProxCheckBeforePulse(getActivity())) {
-            getPreferenceScreen().removePreference(proximitySensorCategory)
+        if (!getProxCheckBeforePulse(activity)) {
+            preferenceScreen.removePreference(proximitySensorCategory)
         }
 
         // Hide AOD if not supported and set all its dependents otherwise
-        if (!alwaysOnDisplayAvailable(getActivity())) {
-            getPreferenceScreen().removePreference(proximitySensorCategory)
+        if (!alwaysOnDisplayAvailable(activity)) {
+            preferenceScreen.removePreference(proximitySensorCategory)
         } else {
-            proximitySensorCategory.setEnabled(!isAlwaysOnEnabled(getActivity()))
+            proximitySensorCategory.isEnabled = !isAlwaysOnEnabled(activity)
         }
     }
 

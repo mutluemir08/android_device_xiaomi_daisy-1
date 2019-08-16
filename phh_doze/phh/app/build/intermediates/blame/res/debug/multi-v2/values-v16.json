@@ -4,17 +4,7 @@
             "outputFile": "/home/osboxes/build/aex/device/xiaomi/daisy/phh_doze/phh/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/osboxes/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4a27b552f4971cab6fc0e926d3ae875d/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/home/osboxes/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4232ef737aeb83322f5343477b7d7e4f/res/values-v16/values-v16.xml",
+                    "source": "/home/osboxes/.gradle/caches/transforms-2/files-2.1/936fb5abf762f41f90a029ad4dc1e7b2/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/osboxes/.gradle/caches/transforms-2/files-2.1/628f4a40d66bd266f53d195c504376dc/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

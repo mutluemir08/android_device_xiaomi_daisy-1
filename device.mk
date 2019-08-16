@@ -17,9 +17,6 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit from msm8953-common
-#$(call inherit-product, device/xiaomi/msm8953-common/msm8953.mk)
-
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/daisy/daisy-vendor.mk)
 

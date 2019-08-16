@@ -1,1 +1,2 @@
 genfscon proc /touchpanel/wakeup_gesture	u:object_r:proc_touchpanel:s0
+genfscon sysfs /devices/soc/qpnp-rtc-8/rtc            u:object_r:sysfs_rtc:s0

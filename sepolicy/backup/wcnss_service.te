@@ -1,2 +1,0 @@
-allow wcnss_service sysfs:file rw_file_perms;
-set_prop(wcnss_service, wifi_prop);

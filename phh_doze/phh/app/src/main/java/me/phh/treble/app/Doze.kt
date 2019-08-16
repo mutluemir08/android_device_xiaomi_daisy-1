@@ -13,17 +13,16 @@ import android.os.Looper
 import android.os.UserHandle
 import android.preference.PreferenceManager
 import android.util.Log
-import java.util.*
 import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.TimeUnit
 
-object Doze: EntryStartup {
+object Doze : EntryStartup {
     val dozeHandlerThread = HandlerThread("Doze Handler").also { it.start() }
     val dozeHandler = Handler(dozeHandlerThread.looper)
 
     class AccelerometerListener {
         val queue = LinkedBlockingQueue<FloatArray>()
-        val cb = object: SensorEventListener {
+        val cb = object : SensorEventListener {
             override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
             }
 
@@ -34,11 +33,11 @@ object Doze: EntryStartup {
         }
 
         fun read(): FloatArray {
-            if(Looper.getMainLooper() == Looper.myLooper())
+            if (Looper.getMainLooper() == Looper.myLooper())
                 throw Exception("This is a blocking function. Don't call me from main Looper.")
             sensorManager.registerListener(cb, accelerometerSensor, 1000)
             val result = queue.poll(1, TimeUnit.SECONDS)
-            return result?: FloatArray(3, {0.0f})
+            return result ?: FloatArray(3, { 0.0f })
         }
 
         fun isFaceUp(): Boolean {
@@ -54,31 +53,31 @@ object Doze: EntryStartup {
         val FAR = false
 
         //If events are closer than this, then guess this is a hand gesture
-        val HANDWAVE_MAX_NS = 1000*1000*1000L // 1s
+        val HANDWAVE_MAX_NS = 1000 * 1000 * 1000L // 1s
         //If events are more separated than this, then guess this is a pocket gesture
-        val POCKET_MIN_NS = 60*1000*1000*1000L // 60s
+        val POCKET_MIN_NS = 60 * 1000 * 1000 * 1000L // 60s
 
         var state = FAR
         var lastEvent = -1L
 
         val maxRange = proximitySensor.maximumRange
-        val threshold = if(maxRange >= 5.0f) 5.0f else maxRange
+        val threshold = if (maxRange >= 5.0f) 5.0f else maxRange
 
         fun update(event: SensorEvent) {
             Log.d("PHH", "Pocket got updated proximity to ${event.values[0]}")
-            if(event.sensor != proximitySensor) return
-            val newState = if(event.values[0] >= threshold) FAR else NEAR
-            if(newState == state) return
+            if (event.sensor != proximitySensor) return
+            val newState = if (event.values[0] >= threshold) FAR else NEAR
+            if (newState == state) return
             state = newState
-            if(lastEvent == -1L) {
+            if (lastEvent == -1L) {
                 lastEvent = event.timestamp
                 return
             }
 
             //If we're far for the first time in a long time
             //Consider it a "pocket" event
-            if(event.timestamp > (lastEvent + POCKET_MIN_NS)) {
-                if(pocketEnabled && state == FAR) {
+            if (event.timestamp > (lastEvent + POCKET_MIN_NS)) {
+                if (pocketEnabled && state == FAR) {
                     Log.d("PHH", "Got pocket event")
                     pulseDoze()
                 }
@@ -86,8 +85,8 @@ object Doze: EntryStartup {
 
             //If we're far but we've been close not long enough
             //Consider it an "handwave" event
-            if(event.timestamp < (lastEvent + HANDWAVE_MAX_NS)) {
-                if(handwaveEnabled && state == FAR) {
+            if (event.timestamp < (lastEvent + HANDWAVE_MAX_NS)) {
+                if (handwaveEnabled && state == FAR) {
                     Log.d("PHH", "Got handwave event")
                     dozeHandler.post {
                         if (accelerometer?.isFaceUp() == true)
@@ -112,20 +111,20 @@ object Doze: EntryStartup {
         handwaveEnabled = handwave
         pocketEnabled = pocket
 
-        val newState = if(handwave || pocket) true else false
-        if(newState && !enabled) {
+        val newState = handwave || pocket
+        if (newState && !enabled) {
             Log.d("PHH", "Starting Doze service")
             this.pocket = Pocket()
             registerListeners()
         }
-        if(enabled && !newState) {
+        if (enabled && !newState) {
             unregisterListeners()
             this.pocket = null
         }
         enabled = newState
     }
 
-    val sensorListener = object: SensorEventListener {
+    val sensorListener = object : SensorEventListener {
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
         }
 
@@ -136,7 +135,7 @@ object Doze: EntryStartup {
 
     fun registerListeners() {
         //Request for once every 1000s, we only want updates anyway
-        sensorManager.registerListener(sensorListener, proximitySensor, 1000*1000*1000)
+        sensorManager.registerListener(sensorListener, proximitySensor, 1000 * 1000 * 1000)
     }
 
     fun unregisterListeners() {
@@ -144,7 +143,7 @@ object Doze: EntryStartup {
     }
 
     val spListener = SharedPreferences.OnSharedPreferenceChangeListener { sp, key ->
-        when(key) {
+        when (key) {
             DozeSettings.handwaveKey, DozeSettings.pocketKey -> {
                 updateState(
                         sp.getBoolean(DozeSettings.handwaveKey, false),
