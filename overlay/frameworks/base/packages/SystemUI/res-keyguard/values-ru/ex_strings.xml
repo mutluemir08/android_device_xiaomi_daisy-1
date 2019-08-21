@@ -20,7 +20,6 @@
     <string name="text_clock_header_one">Сейчас</string>
     <string name="text_clock_header_few">Сейчас</string>
     <string name="text_clock_header_multiple">Сейчас</string>
-
     <!-- Hours. -->
     <string name="text_clock_hours_midnight">Ноль часов</string>
     <string name="text_clock_hours_one">Час</string>
@@ -46,7 +45,6 @@
     <string name="text_clock_hours_twentyone">Двадцать один</string>
     <string name="text_clock_hours_twentytwo">Двадцать два</string>
     <string name="text_clock_hours_twentythree">Двадцать три</string>
-
     <!-- Minutes. -->
     <string name="text_clock_minutes_zero">Ноль ноль</string>
     <string name="text_clock_minutes_one">Ноль одна</string>

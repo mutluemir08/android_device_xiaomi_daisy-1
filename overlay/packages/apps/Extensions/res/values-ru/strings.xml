@@ -93,7 +93,7 @@
     <string name="app_ops_category">Операции в приложениях</string>
     <!-- App info dialog -->
     <string name="extensions_dialog_title">Помогите нам помочь Вам!</string>
-    <string name="extensions_dialog_message">Если Вы найдете ошибку в любых из этих настроек, сообщите в разделе багрепортов на нашей странице Google+. Вы ДОЛЖНЫ прикрепить следующее:\n\n1. Logcat или last_kmsg\n2. Используемое ядро и моды\n3. Любую полезную информацию.\n\nЕсли Вы не сможете адекватно сообщить о проблеме, не ждите, что мы её исправим.</string>
+    <string name="extensions_dialog_message">Если Вы найдете ошибку в любых из этих настроек, сообщите в разделе баг-репортов в нашей Telegram группе. Вы ДОЛЖНЫ прикрепить следующее: 1. Logcat или last_kmsg; 2. используемое ядро и моды; 3. Любую полезную информацию. Если Вы не сможете адекватно сообщить о проблеме, не ждите, что мы её исправим.</string>
     <string name="extensions_dialog_toast">ПРОЧИТАЙТЕ ЭТО ПОЛНОСТЬЮ!</string>
     <!-- System theme -->
     <string name="accent_picker_dialog_title">Выберите оттенок цвета</string>
@@ -117,7 +117,7 @@
     <string name="powermenu_power">Питание</string>
     <string name="powermenu_restart">Перезагрузка</string>
     <string name="powermenu_restart_recovery">Варианты перезагрузки</string>
-    <string name="powermenu_airplane">Режим \"В самолёте\"</string>
+    <string name="powermenu_airplane">Режим полета</string>
     <string name="powermenu_settings">Настройки</string>
     <string name="powermenu_lockdown">Заблокировать</string>
     <string name="powermenu_soundpanel">Звуковая панель</string>
@@ -624,7 +624,7 @@
     <string name="default_iconpack_title">По умолчанию</string>
     <!-- Heads up options -->
     <string name="less_boring_heads_up_title">Менее надоедливые всплывающие уведомления</string>
-    <string name="less_boring_heads_up_summary">Показывать всплывающие уведомления только для приложений телефона и сообщений, если они находятся в фоне</string>
+    <string name="less_boring_heads_up_summary">Показывать всплывающие уведомления только для звонков или сообщений (если они не на переднем плане)</string>
     <!-- AEX logo -->
     <string name="aex_logo_title">AEX лого</string>
     <string name="aex_logo_summary">Пусть все знают, что Вы используете AEX, когда смотрят на экран Вашего телефона</string>

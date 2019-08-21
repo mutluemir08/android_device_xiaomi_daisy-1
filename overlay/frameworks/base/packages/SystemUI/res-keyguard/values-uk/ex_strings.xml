@@ -20,7 +20,6 @@
     <string name="text_clock_header_one">Зараз</string>
     <string name="text_clock_header_few">Зараз</string>
     <string name="text_clock_header_multiple">Зараз</string>
-
     <!-- Hours. -->
     <string name="text_clock_hours_midnight">Нуль годин</string>
     <string name="text_clock_hours_one">Одна</string>
@@ -55,7 +54,7 @@
     <string name="text_clock_minutes_five">Нуль п\'ять</string>
     <string name="text_clock_minutes_six">Нуль шість</string>
     <string name="text_clock_minutes_seven">Нуль сім</string>
-    <string name="text_clock_minutes_eight">Нуль вісімь</string>
+    <string name="text_clock_minutes_eight">Нуль вісім</string>
     <string name="text_clock_minutes_nine">Нуль дев\'ять</string>
     <string name="text_clock_minutes_ten">Десять</string>
     <string name="text_clock_minutes_eleven">Одинадцять</string>
@@ -97,14 +96,14 @@
     <string name="text_clock_minutes_fortyseven">Сорок сім</string>
     <string name="text_clock_minutes_fortyeight">Сорок вісім</string>
     <string name="text_clock_minutes_fortynine">Сорок дев\'ять</string>
-    <string name="text_clock_minutes_fifty">П\'ятьдесят</string>
-    <string name="text_clock_minutes_fiftyone">П\'ятьдесят одна</string>
-    <string name="text_clock_minutes_fiftytwo">П\'ятьдесят дві</string>
-    <string name="text_clock_minutes_fiftythree">П\'ятьдесят три</string>
-    <string name="text_clock_minutes_fiftyfour">П\'ятьдесят чотири</string>
-    <string name="text_clock_minutes_fiftyfive">П\'ятьдесят п\'ять</string>
-    <string name="text_clock_minutes_fiftysix">П\'ятьдесят шість</string>
-    <string name="text_clock_minutes_fiftyseven">П\'ятьдесят сім</string>
-    <string name="text_clock_minutes_fiftyeight">П\'ятьдесят вісім</string>
-    <string name="text_clock_minutes_fiftynine">П\'ятьдесят дев\'ять</string>
+    <string name="text_clock_minutes_fifty">П\'ятдесят</string>
+    <string name="text_clock_minutes_fiftyone">П\'ятдесят одна</string>
+    <string name="text_clock_minutes_fiftytwo">П\'ятдесят дві</string>
+    <string name="text_clock_minutes_fiftythree">П\'ятдесят три</string>
+    <string name="text_clock_minutes_fiftyfour">П\'ятдесят чотири</string>
+    <string name="text_clock_minutes_fiftyfive">П\'ятдесят п\'ять</string>
+    <string name="text_clock_minutes_fiftysix">П\'ятдесят шість</string>
+    <string name="text_clock_minutes_fiftyseven">П\'ятдесят сім</string>
+    <string name="text_clock_minutes_fiftyeight">П\'ятдесят вісім</string>
+    <string name="text_clock_minutes_fiftynine">П\'ятдесят дев\'ять</string>
 </resources>

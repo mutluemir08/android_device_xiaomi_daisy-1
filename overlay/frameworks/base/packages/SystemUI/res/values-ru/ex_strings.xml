@@ -97,6 +97,7 @@
     <string name="systemui_theme_style_black">Чёрный стиль</string>
     <string name="systemui_theme_style_extended">Extended стиль</string>
     <string name="systemui_theme_style_chocolate">Шоколадный стиль</string>
+    <string name="systemui_theme_style_elegant">Элегантный UI</string>
     <string name="quick_settings_theme_tile_title">Оттенок</string>
     <string name="quick_settings_theme_tile_accent_detail_title">Выберите цвет</string>
     <string name="quick_settings_theme_tile_style_detail_title">Выберите стиль</string>
@@ -124,14 +125,15 @@
     <string name="quick_settings_theme_tile_color_pale_red">Бледно-красный</string>
     <string name="quick_settings_theme_tile_color_extended_green">Extended зелёный</string>
     <string name="quick_settings_theme_tile_color_pale_blue">Бледно-голубой</string>
-    <string name="quick_settings_theme_tile_color_jade_green">Нефритовый</string>
+    <string name="quick_settings_theme_tile_color_jade_green">Зелёный нефрит</string>
+    <string name="quick_settings_theme_tile_color_elegant_green">Элегантный зеленый</string>
     <string name="quick_settings_theme_tile_color_black">Чёрный</string>
     <string name="quick_settings_theme_tile_color_white">Белый</string>
     <string name="theme_info_title">Что это?</string>
     <string name="theme_info_message">Плитка \"Темы\" - это уникальная, но простая в использовании плитка, которая позволяет пользователю изменять системный оттенок или стиль.\n\nЧтобы переключиться между оттенками и стилями, просто удерживайте нажатой плитку, а затем ещё раз нажмите на неё, чтобы выбрать из предложенных вариантов.</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Колонки</string>
-    <string name="qs_menu_item_columns_landscape">Колонки (ландшафтный режим)</string>
+    <string name="qs_menu_item_columns">Столбцы</string>
+    <string name="qs_menu_item_columns_landscape">Колонки (ландшафт)</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -157,26 +159,25 @@
     <string name="quick_settings_expanded_desktop_off">Нормальный</string>
     <string name="quick_settings_expanded_navigation_off">Скрыть панель навигации</string>
     <string name="quick_settings_expanded_statusbar_off">Скрыть строку состояния</string>
-    <!-- Advance location quick setting tile -->
-    <string name="quick_settings_location_secondary_battery_saving">Экономия заряда батареи</string>
+    <!-- Location Tile -->
     <string name="accessibility_quick_settings_location_battery_saving">Определение местоположения: режим экономии батареи.</string>
     <string name="quick_settings_location_secondary_gps_only">Только датчики</string>
     <string name="accessibility_quick_settings_location_gps_only">Определение местоположения: только по спутникам.</string>
     <string name="quick_settings_location_secondary_high_accuracy">Высокая точность</string>
     <string name="accessibility_quick_settings_location_high_accuracy">Определение местоположения: по всем источникам.</string>
-    <string name="quick_settings_location_battery_saving_label">Экономия заряда батареи</string>
-    <string name="quick_settings_location_battery_saving_label_twoline">Экономия\nзаряда</string>
-    <string name="quick_settings_location_gps_only_label">Только датчики</string>
-    <string name="quick_settings_location_gps_only_label_twoline">Только\nдатчики</string>
+    <string name="quick_settings_location_battery_saving_label">Экономия батареи</string>
+    <string name="quick_settings_location_battery_saving_label_twoline">Экономия\nбатареи</string>
+    <string name="quick_settings_location_gps_only_label">Только GPS</string>
+    <string name="quick_settings_location_gps_only_label_twoline">Только GPS</string>
     <string name="quick_settings_location_high_accuracy_label">Высокая точность</string>
     <string name="quick_settings_location_high_accuracy_label_twoline">Высокая\nточность</string>
     <string name="quick_settings_location_detail_title">Местоположение</string>
-    <string name="quick_settings_location_detail_menu_title">Выбор режима:</string>
+    <string name="quick_settings_location_detail_menu_title">Выберите режим:</string>
     <string name="quick_settings_location_detail_mode_high_accuracy_title">Высокая точность</string>
-    <string name="quick_settings_location_detail_mode_battery_saving_title">Экономия заряда батареи</string>
-    <string name="quick_settings_location_detail_mode_sensors_only_title">Только датчики</string>
-    <string name="quick_settings_location_detail_mode_high_accuracy_description">Использовать GPS, Wi\u2011Fi, Bluetooth или сотовые сети для определения местоположения</string>
-    <string name="quick_settings_location_detail_mode_battery_saving_description">Использовать Wi\u2011Fi, Bluetooth или сотовые сети для определения местоположения</string>
+    <string name="quick_settings_location_detail_mode_battery_saving_title">Экономия батареи</string>
+    <string name="quick_settings_location_detail_mode_sensors_only_title">По спутникам GPS</string>
+    <string name="quick_settings_location_detail_mode_high_accuracy_description">Использовать GPS, Wi‑Fi, Bluetooth и мобильные сети для определения местоположения </string>
+    <string name="quick_settings_location_detail_mode_battery_saving_description">Использовать Wi‑Fi, Bluetooth и мобильные сети для определения местоположения</string>
     <string name="quick_settings_location_detail_mode_sensors_only_description">Использовать GPS для определения местоположения</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time">Быстрая зарядка (<xliff:g id="charging_time_left" example="4 часа и 2 минуты">%s</xliff:g> до полной зарядки)</string>
@@ -252,12 +253,12 @@
     <string name="quick_settings_volume_panel_label">Панель громкости</string>
     <!-- Reader mode QS tile -->
     <string name="quick_settings_reading_mode">Режим чтения</string>
-    <string name="accessibility_quick_settings_reading_mode_on">Режим чтения вкл.</string>
-    <string name="accessibility_quick_settings_reading_mode_off">Режим чтения выкл.</string>
-    <string name="accessibility_quick_settings_reading_mode_changed_on">Режим чтения включен</string>
-    <string name="accessibility_quick_settings_reading_mode_changed_off">Режим чтения выключен</string>
-
+    <string name="accessibility_quick_settings_reading_mode_on">Режим чтения включен.</string>
+    <string name="accessibility_quick_settings_reading_mode_off">Режим чтения выключен.</string>
+    <string name="accessibility_quick_settings_reading_mode_changed_on">Режим чтения активирован.</string>
+    <string name="accessibility_quick_settings_reading_mode_changed_off">Режим чтения деактивирован.</string>
     <!-- Font Tile -->
     <string name="quick_settings_font_label">Шрифты</string>
     <string name="quick_settings_font_detail_label">Выберите шрифт</string>
+    <!-- VPN QS tile -->
 </resources>

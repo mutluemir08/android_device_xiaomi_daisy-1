@@ -623,9 +623,10 @@
     <!-- IconPack Preference -->
     <string name="default_iconpack_title">За замовчуванням</string>
     <!-- Heads up options -->
-    <string name="less_boring_heads_up_title">Менш набридливі спливаючі сповіщення</string>
-    <string name="less_boring_heads_up_summary">Показувати спливаючі сповіщення тільки для додатків телефону та повідомлень, якщо вони знаходяться в фоновому режимі</string>
+    <string name="less_boring_heads_up_title">Зробити спливаючі сповіщення менш набридливими</string>
+    <string name="less_boring_heads_up_summary">Відображати спливаючі сповіщення лише для дзвінків і повідомлень</string>
     <!-- AEX logo -->
     <string name="aex_logo_title">AEX лого</string>
     <string name="aex_logo_summary">Нехая всі знають, що Ви використовуєте AEX, коли дивляться на екран Вашого телефону</string>
+    <!-- Gaming mode -->
 </resources>

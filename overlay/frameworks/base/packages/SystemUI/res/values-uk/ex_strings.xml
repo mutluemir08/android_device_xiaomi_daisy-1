@@ -97,6 +97,7 @@
     <string name="systemui_theme_style_black">Чорний інтерфейс</string>
     <string name="systemui_theme_style_extended">Розширений інтерфейс</string>
     <string name="systemui_theme_style_chocolate">Шоколадний інтерфейс</string>
+    <string name="systemui_theme_style_elegant">Елегантний UI</string>
     <string name="quick_settings_theme_tile_title">Акцент</string>
     <string name="quick_settings_theme_tile_accent_detail_title">Вибір кольору</string>
     <string name="quick_settings_theme_tile_style_detail_title">Обрати стиль</string>
@@ -125,6 +126,7 @@
     <string name="quick_settings_theme_tile_color_extended_green">Насичений зелений</string>
     <string name="quick_settings_theme_tile_color_pale_blue">Блідо-блакитний</string>
     <string name="quick_settings_theme_tile_color_jade_green">Нефритово-зелений</string>
+    <string name="quick_settings_theme_tile_color_elegant_green">Елегантний зелений</string>
     <string name="quick_settings_theme_tile_color_black">Чорний</string>
     <string name="quick_settings_theme_tile_color_white">Білий</string>
     <string name="theme_info_title">Що це?</string>
@@ -164,19 +166,19 @@
     <string name="accessibility_quick_settings_location_gps_only">Визначення місцезнаходження: тільки датчики.</string>
     <string name="quick_settings_location_secondary_high_accuracy">Висока точність</string>
     <string name="accessibility_quick_settings_location_high_accuracy">Визначення місцезнаходження: режим високої точності.</string>
-    <string name="quick_settings_location_battery_saving_label">Енергозбереження</string>
-    <string name="quick_settings_location_battery_saving_label_twoline">Енерго-\nзбереження</string>
-    <string name="quick_settings_location_gps_only_label">Тільки датчики</string>
-    <string name="quick_settings_location_gps_only_label_twoline">Тільки\nдатчики</string>
+    <string name="quick_settings_location_battery_saving_label">Режим економії енергії</string>
+    <string name="quick_settings_location_battery_saving_label_twoline">Економія\nбатареї</string>
+    <string name="quick_settings_location_gps_only_label">Тільки GPS</string>
+    <string name="quick_settings_location_gps_only_label_twoline">Тільки\nGPS</string>
     <string name="quick_settings_location_high_accuracy_label">Висока точність</string>
     <string name="quick_settings_location_high_accuracy_label_twoline">Висока\nточність</string>
     <string name="quick_settings_location_detail_title">Місцезнаходження</string>
-    <string name="quick_settings_location_detail_menu_title">Вибір режиму:</string>
+    <string name="quick_settings_location_detail_menu_title">Виберіть режим:</string>
     <string name="quick_settings_location_detail_mode_high_accuracy_title">Висока точність</string>
-    <string name="quick_settings_location_detail_mode_battery_saving_title">Енергозбереження</string>
-    <string name="quick_settings_location_detail_mode_sensors_only_title">Тільки датчики</string>
-    <string name="quick_settings_location_detail_mode_high_accuracy_description">Використовувати GPS, Wi\u2011Fi, Bluetooth або стільникові мережі для визначення місцезнаходження</string>
-    <string name="quick_settings_location_detail_mode_battery_saving_description">Використовувати Wi\u2011Fi, Bluetooth стільникові мережі для визначення місцезнаходження</string>
+    <string name="quick_settings_location_detail_mode_battery_saving_title">Режим економії енергії</string>
+    <string name="quick_settings_location_detail_mode_sensors_only_title">Лише GPS</string>
+    <string name="quick_settings_location_detail_mode_high_accuracy_description">Використовувати GPS, Wi\u2011Fi, Bluetooth і мобільні мережі, щоб визначати місцезнаходження </string>
+    <string name="quick_settings_location_detail_mode_battery_saving_description">Використовувати Wi‑Fi, Bluetooth і мобільні мережі, щоб визначати місцеположення</string>
     <string name="quick_settings_location_detail_mode_sensors_only_description">Використовувати GPS для визначення місцезнаходження</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time">Швидке заряджання (<xliff:g id="charging_time_left" example="4 год 2 хв">%s</xliff:g> до повної зарядки)</string>
@@ -252,12 +254,12 @@
     <string name="quick_settings_volume_panel_label">Панель гучності</string>
     <!-- Reader mode QS tile -->
     <string name="quick_settings_reading_mode">Режим читання</string>
-    <string name="accessibility_quick_settings_reading_mode_on">Режим читання увімк.</string>
-    <string name="accessibility_quick_settings_reading_mode_off">Режим читання вимк.</string>
-    <string name="accessibility_quick_settings_reading_mode_changed_on">Режим читання увімкнено</string>
-    <string name="accessibility_quick_settings_reading_mode_changed_off">Режим читання вимкнено</string>
-
+    <string name="accessibility_quick_settings_reading_mode_on">Режим читання увімкнено.</string>
+    <string name="accessibility_quick_settings_reading_mode_off">Режим читання вимкнено.</string>
+    <string name="accessibility_quick_settings_reading_mode_changed_on">Режим читання активовано.</string>
+    <string name="accessibility_quick_settings_reading_mode_changed_off">Режим читання деактивовано.</string>
     <!-- Font Tile -->
     <string name="quick_settings_font_label">Шрифти</string>
-    <string name="quick_settings_font_detail_label">Оберіть шрифт</string>
+    <string name="quick_settings_font_detail_label">Обрати шрифт</string>
+    <!-- VPN QS tile -->
 </resources>
