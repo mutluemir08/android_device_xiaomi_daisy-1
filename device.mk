@@ -140,12 +140,21 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom
+
+# Preopt SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
 
 # QCOM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
+
+# QTI performance
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+    power.qcom
 
 # Telephony
 PRODUCT_BOOT_JARS += \
@@ -181,12 +190,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# Preopt SystemUI
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
-	
-# QTI performance
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
