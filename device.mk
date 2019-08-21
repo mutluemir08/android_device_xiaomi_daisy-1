@@ -140,6 +140,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    power.qcom
 
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -154,7 +155,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
-    power.qcom
 
 # Telephony
 PRODUCT_BOOT_JARS += \
