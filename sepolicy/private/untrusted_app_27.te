@@ -1,2 +1,4 @@
-allow untrusted_app_27 camera_prop:file r_file_perms;
-allow untrusted_app_27 vendor_camera_prop:file r_file_perms;
+#allow untrusted_app_27 camera_prop:file r_file_perms;
+get_prop(untrusted_app_27, camera_prop);
+#allow untrusted_app_27 vendor_camera_prop:file r_file_perms;
+get_prop(untrusted_app_27, vendor_camera_prop);

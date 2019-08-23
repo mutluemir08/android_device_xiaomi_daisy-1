@@ -1,4 +1,4 @@
-allow system_server camera_prop:file r_file_perms;
-allow system_server vendor_camera_prop:file r_file_perms;
+get_prop(system_server, camera_prop)
+get_prop(system_server, vendor_camera_prop)
 
 allow system_server sdcardfs:file r_file_perms;
