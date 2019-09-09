@@ -86,6 +86,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     phh_Doze
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/me.phh.treble.app.xml:system/etc/permissions/me.phh.treble.app.xml
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
@@ -122,10 +125,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/keylayout/uinput-goodix.kl:system/usr/keylayout/uinput-goodix.kl
 
-#Lawnchair
-PRODUCT_PACKAGES += \
-    ch.deletescape.lawnchair.plah
-
 # LiveDisplay HAL
 PRODUCT_PACKAGES += \
     lineage.livedisplay@2.0-service-sdm
@@ -150,6 +149,11 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
+
+# QCOM BOOST
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
 
 # Telephony
 PRODUCT_BOOT_JARS += \

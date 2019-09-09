@@ -99,6 +99,7 @@ lib/libfm-hci.so
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
+etc/permissions/privapp-permissions-com.qualcomm.location.xml
 framework/com.qti.location.sdk.jar
 framework/izat.xt.srv.jar
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
@@ -269,3 +270,24 @@ lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
 lib64/vendor.xiaomi.hardware.mtdservice@1.1.so
+
+# QCOM Boost framework
+bin/perfservice
+etc/init/perfservice.rc
+etc/perf/whitelistedapps.xml
+-framework/QPerformance.jar
+-framework/UxPerformance.jar
+lib/libqti-at.so
+lib/libqti-iopd-client_system.so
+lib/libqti-perfd-client_system.so
+lib/libqti-util_system.so
+lib/libqti_performance.so
+lib/vendor.qti.hardware.iop@1.0.so
+lib/vendor.qti.hardware.iop@2.0.so
+lib64/libqti-at.so
+lib64/libqti-iopd-client_system.so
+lib64/libqti-perfd-client_system.so
+lib64/libqti-util_system.so
+lib64/libqti_performance.so
+lib64/vendor.qti.hardware.iop@1.0.so
+lib64/vendor.qti.hardware.iop@2.0.so

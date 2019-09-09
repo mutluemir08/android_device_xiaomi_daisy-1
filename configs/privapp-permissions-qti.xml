@@ -113,13 +113,4 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.skyhook.blp">
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
-
-    <privapp-permissions package="me.phh.treble.app">
-        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="com.qualcomm.location">
-        <permission name="android.permission.MANAGE_USERS"/>
-    </privapp-permissions>
-
 </permissions>

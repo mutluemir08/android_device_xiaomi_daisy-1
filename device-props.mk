@@ -1,7 +1,7 @@
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
-dalvik.vm.dex2oat-filter=speed \
-dalvik.vm.image-dex2oat-filter=speed
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-filter=speed
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -95,10 +95,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_0="" \
     persist.rild.nitz_short_ons_1="" \
     persist.rild.nitz_short_ons_2="" \
-    persist.rild.nitz_short_ons_3=""
+    persist.rild.nitz_short_ons_3="" \
 
 # Perf
-ro.sys.fw.dex2oat_thread_count=8 \
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.fw.dex2oat_thread_count=8
+
+# QTI Performance
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.enable_prefetch=1 \
+    vendor.iop.enable_uxe=1 \
+    vendor.iop.enable_prefetch_ofr=1 \
+    vendor.perf.iop_v3.enable=1 \
+    ro.vendor.at_library=libqti-at.so \
+    persist.vendor.qti.games.gt.prof=1
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
