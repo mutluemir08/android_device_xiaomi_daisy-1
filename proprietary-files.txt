@@ -291,3 +291,7 @@ lib64/libqti-util_system.so
 lib64/libqti_performance.so
 lib64/vendor.qti.hardware.iop@1.0.so
 lib64/vendor.qti.hardware.iop@2.0.so
+
+# Improve Touch
+lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
+lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
