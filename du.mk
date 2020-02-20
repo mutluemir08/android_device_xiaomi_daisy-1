@@ -21,12 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common DU stuff.
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
+
+# PixelGApps
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
-PRODUCT_NAME := aosp_daisy
+PRODUCT_NAME := du_daisy
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A2 Lite
@@ -43,17 +46,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.18.0.PDLMIXM:user/release-keys"
 
-# Use Gcam and Jelly
-TARGET_USE_GCAM := false
-TARGET_USE_JELLY := true
-
 TARGET_BOOT_ANIMATION_RES := 2280
-
-# Set this flag in build script
-ifeq ($(CURRENT_BUILD_TYPE), gapps)
-# Use Gapps
-  TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
-  WITH_GAPPS := true
-  TARGET_GAPPS_ARCH := arm64
-  IS_PHONE := true
-endif
